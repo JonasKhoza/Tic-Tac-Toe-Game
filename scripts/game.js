@@ -10,9 +10,9 @@ function startNewGame() {
     activePlayer.textContent = players[activePlayer].name;
   }
   gameBoardOrderedList.style.display = "block";
-   gameOverBoardElement.nextElementSibling.innerHTML = `It's your turn <span id="active-player-name">Player Name</span>!`;
 
   activePlayerName.textContent = players[activePlayer].name;
+  gameOverBoardElement.nextElementSibling.innerHTML = `It's your turn <span id="active-player-name">${players[activePlayer].name}</span>!`;
 }
 
 function switchPlayer() {
