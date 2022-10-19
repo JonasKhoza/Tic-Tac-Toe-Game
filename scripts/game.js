@@ -12,7 +12,6 @@ function startNewGame() {
   gameBoardOrderedList.style.display = "block";
 
   activePlayerName.textContent = players[activePlayer].name;
-  gameOverBoardElement.nextElementSibling.innerHTML = `It's your turn <span id="active-player-name">${players[activePlayer].name}</span>!`;
 }
 
 function switchPlayer() {
@@ -98,7 +97,6 @@ function checkForWinner() {
 
 function gameOver(winnerId) {
   gameOverBoardElement.style.display = "block";
-  gameOverBoardElement.nextElementSibling.textContent = "";
 
   if (winnerId > 0) {
     gameOverBoardElement.firstElementChild.firstElementChild.textContent =
